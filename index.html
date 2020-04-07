@@ -1,154 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-  <head>
-    <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sistema de Gestão de Processo - UCR</title>
+	<meta name="Description" content="sistema de gestao do coque">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	
-	<!-- Estilo customizado -->
-	<link rel="stylesheet" href="css/estilo.css"></link>
-
-    <title>Sistema de Gestão do Coque</title>
-  </head>
-  <body>
-  
-	<header><!-- Início do Header -->
-		<nav class="navbar navbar-expand-sm navbar-light bg-light">
-			<div class="container">
-				<a href="#" class="navbar-brand"><img src="img/logo.png" width="142"></a>
-					
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_principal" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-				
-				<div class="collapse navbar-collapse" id="nav_principal">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-						<li class="nav-item"><a href="#" class="nav-link">Processo</a></li>
-						<li class="nav-item"><a href="#" class="nav-link">Informes</a></li>
-						<li class="nav-item"><a href="#" class="nav-link mr-4">Pessoal</a></li>
-						<li class="nav-item"><a href="#" class="btn btn-outline-dark">Entrar</a></li>
-					</ul>
-				</div>
-				
+	<div class="container">
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-sm">
+				<form class="form-signin" method="post" action="login.controler.php">
+					<h2 class="form-signin-heading" align="center">Sistema de Gestão do Coque</h2>
+					<label for="txtUsuario" class="sr-only">Usuário</label>
+					<input type="text" id="txtUsuario" name="LoginUsuario" class="form-control" placeholder="Usuário" required autofocus>
+					<label for="txtSenha" class="sr-only">Senha</label>
+					<input type="password" id="txtSenha" name="SenhaUsuario" class="form-control" placeholder="Senha" required>
+					<button id="btn-logar" type="submit" class="btn btn-primary btn-block">Entrar</button>
+				</form>
 			</div>
-		</nav>
-	</header><!-- Fim do Header -->
-
-	<section id="home"> <!-- Seção Home -->
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 d-flex">
-					<div class="align-self-center">
-						<h1>Sistema de Gestão do Processo do Coque</h1>
-						<h2 class="mt-4">Refinaria Abreu e Lima - RNEST</h2>
-						<p class="mt-4">U-21 Unidade de Coqueamento Reterdado</p>
-						<p>U-26 Unidade de Tratamento Cáustico Regenerativo</p>
-						<p>U-28 Unidade de Tratamento MDEA</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<img src="img/controle-processo-mobile.png" class="img-fluid">
-				</div>
-			</div>
+			<div class="col-sm"></div>
 		</div>
-	</section>
+	</div>
 	
+<!-- JQuery JS -->
+<script src="jquery/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
 	
-	<section class="mt-4"> <!-- Seção U-21 Principal -->
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 mt-4">
-						<h2>U-21 Coque</h2>
-						<ul class="list-group">
-							<li class="list-group-item">Carga Fresca: 8.500 m³/d</li>
-							<li class="list-group-item">Razão de Reciclo: 38,7%</li>
-							<li class="list-group-item">Rendimento de Diesel: 52,3%</li>
-							<li class="list-group-item">Diesel para HDT: 152 m³/h</li>
-							<li class="list-group-item">Diesel para TQ: 0 m³/h</li>
-							<li class="list-group-item">Rendimento de GOP: 20,6%</li>
-							<li class="list-group-item">Nafta para HDT: 54 m³/h</li>
-							<li class="list-group-item">Nafta para TQ: 0 m³/h</li>
-							<li class="list-group-item">Reprocessamento de Resíduo: 0 m³/h</li>
-							<li class="list-group-item">Reprocessamento de Nafta: 10,4 m³/h</li>
-							<li class="list-group-item">Reprocessamento de GLP: 3,2 m³/h</li>
-							<li class="list-group-item">T95 Diesel: 368,5°C (14:00 19/06)</li>
-				</div>
-				
-				<div class="col-md-4 mt-4">
-						<h2>U-21 Reatores</h2>
-						<ul class="list-group">
-							<li class="list-group-item">
-								<div class="w-100 justify-content-between">
-									<h6>Conjunto A</h6>
-									<ul class="list-unstyled">
-										<li>R-21001A: Recebendo desde 19/06 10:00</li>
-										<li>R-21001B: Resfriando</li>
-									</ul>
-								</div>
-							</li>
-							
-							<li class="list-group-item">
-								<div class="w-100 justify-content-between">
-									<h6>Conjunto B</h6>
-									<ul class="list-unstyled">
-										<li>R-21001C: Descoqueando</li>
-										<li>R-21001D: Recebendo desde 19/06 20:15</li>
-									</ul>
-								</div>
-							</li>
-							
-							<li class="list-group-item">
-								<div class="w-100 justify-content-between">
-									<h6>Conjunto C</h6>
-									<ul class="list-unstyled">
-										<li>R-21001E: Recebendo desde 20/06 06:30</li>
-										<li>R-21001F: Banho-Maria</li>
-									</ul>
-								</div>
-							</li>
-							
-						</ul>
-				</div>
-				
-				<div class="col-md-4 mt-4">
-						<h2>U-26 TCR</h2>
-						<ul class="list-group">
-							<li class="list-group-item">Vazão soda: 0,9 m³/h</li>
-							<li class="list-group-item">Nível V-26001: 36,6%</li>
-							<li class="list-group-item">Nível T-26001: 23,9%</li>
-							<li class="list-group-item">Temperatura P-26002: 42°C</li>
-							<li class="list-group-item">Corrent B-26001: 101%</li></li>
-							<li class="list-group-item">Corrosão: 1 (01:00 20/06)</li>
-							<li class="list-group-item">Enxofre Total: 89 ppm (01:00 20/06)</li>
-							<li class="list-group-item">Resíduo: 0,05% (01:00 20/06)</li>
-						</ul>
-				</div>
-				
-				<div class="col-md-4 mt-4">
-						<h2>U-28 MDEA</h2>
-						<ul class="list-group">
-							<li class="list-group-item">Vazão MDEA p/ T-28602: 22 m³/h</li>
-							<li class="list-group-item">Vazão MDEA p/ T-28603: 38 m³/h</li>
-							<li class="list-group-item">H2S GC: 1354 ppm (05:00 20/06)</li>
-						</ul>
-				</div>
-
-			</div>
-		</div>
-	</section>
-	
-	
-
-    <!-- JavaScript (Opcional) -->
-	
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
